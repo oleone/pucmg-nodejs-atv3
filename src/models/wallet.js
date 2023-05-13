@@ -11,5 +11,8 @@ export class Wallet {
     constructor(data = {}) {
         Object.assign(this, data);
         id = uuid.v4();
+        this.userId = data.userId;
+        this.balance = data.balance;
+        this.createdAt = Date.now();
     }
 }

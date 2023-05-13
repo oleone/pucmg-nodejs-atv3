@@ -66,9 +66,13 @@ export class AccountController {
 
     delete = async (req, res) => {
         try {
+            const payload = req.body;
+            const id = req.param.id;
 
+            const updated = await this.service.update(id, payload);
+            res.send(updated).status(200);
         } catch (error) {
-
+            res.send(error).status(500);
         }
     }
 }
