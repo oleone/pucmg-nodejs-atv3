@@ -17,7 +17,7 @@ services:
   api:
     container_name: api_pucmg_nodejs_atv3
     build: .
-    image: node:16
+    image: node:18-alpine
     depends_on:
       - database
     ports:

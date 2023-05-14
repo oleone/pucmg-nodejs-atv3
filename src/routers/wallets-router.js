@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { WalletController } from '../controllers/wallets-controller.js';
 import { WalletService } from '../services/wallets-service.js';
-import { WalletRepository } from '../repositories/account-repository.js';
+import { WalletRepository } from '../repositories/wallet-repository.js';
 
 export class WalletRouter {
     constructor() {

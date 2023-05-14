@@ -1,13 +1,14 @@
-FROM node:16
+FROM node:18-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /workspace
 
 COPY ./package.json ./
-
 COPY ./src ./src
 
 RUN npm install
 
 EXPOSE 3000
 
-RUN npm start
+RUN npm run start
+
+# CMD [ "node", "main.js" ]

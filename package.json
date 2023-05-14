@@ -7,6 +7,7 @@
   "scripts": {
     "start": "yarn migrate && node src/index.js",
     "start:dev": "nodemon ./src/index.js --config nodemon.json",
+    "start:dev:2": "nodemon ./src/main.js --config nodemon.json",
     "migration:make": "knex migrate:make --esm --knexfile=./src/config/knexfile.mjs",
     "migrate": "knex migrate:latest --esm --knexfile=./src/config/knexfile.mjs",
     "migrate:down": "knex migrate:down --esm --knexfile=./src/config/knexfile.mjs"
@@ -22,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.3.0",
     "pg": "^8.8.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "nodemon": "^2.0.22"
   }
 }
